@@ -28,9 +28,16 @@ LogGuard is a full-stack cybersecurity web application that allows security anal
 2. **Create your environment file**
    ```bash
    cp backend/.env.example backend/.env
-   ```
 
-3. **Add your Groq API key** (optional but recommended)
+   ```
+3. **Generate a secure JWT secret**
+
+   Run this one-liner to generate and insert the secret directly into your `.env`:
+```bash
+   sed -i "s/your_jwt_secret_here/$(openssl rand -hex 32)/" backend/.env
+```
+
+4. **Add your Groq API key** (optional but recommended)
    
    Open `.env` and replace `your_groq_api_key_here` with your actual Groq API key:
    ```
@@ -49,17 +56,17 @@ LogGuard is a full-stack cybersecurity web application that allows security anal
    - Express backend API (port 4000)
    - Next.js frontend (port 3000)
 
-5. **Open the app**
+6. **Open the app**
    
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-6. **Log in with default credentials**
+7. **Log in with default credentials**
    ```
    Username: admin
    Password: admin123
    ```
 
-7. **Test with sample logs**
+8. **Test with sample logs**
    
    Upload any of the files from the following:
    - `normal.log` — Normal browsing traffic (no anomalies expected)
