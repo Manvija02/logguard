@@ -25,6 +25,7 @@ fi
 echo "[*] Docker not found — starting backend locally with Python..."
 
 cd "$(dirname "$0")/backend"
+[ -f .env ] || { echo "ERROR: backend/.env missing. Copy .env.example first."; exit 1; }
 
 # Create venv if needed
 if [ ! -d "venv" ]; then
