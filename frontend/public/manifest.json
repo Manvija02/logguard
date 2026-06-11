@@ -1,0 +1,9 @@
+{
+  "name": "LogGuard",
+  "short_name": "LogGuard",
+  "description": "AI-Powered Security Log Analyzer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060810",
+  "theme_color": "#00ff88"
+}
