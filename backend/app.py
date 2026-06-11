@@ -320,6 +320,11 @@ def init_db():
     connect_with_retry()
     log.info("[Server] Running database migrations...")
     run_migrations()
+    groq_key = os.environ.get("GROQ_API_KEY", "").strip()
+    if not groq_key:
+      log.warning("[Server] GROQ_API_KEY not set — will use local rule-based fallback.")
+    elif not groq_key.startswith("gsk_"):
+      log.warning("[Server] GROQ_API_KEY looks malformed — AI calls may fail.")
 
 
 if os.environ.get("SKIP_DB_INIT") != "1":
