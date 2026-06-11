@@ -15,7 +15,7 @@ LogGuard is a full-stack cybersecurity web application that allows security anal
 ### Prerequisites
 - [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed
 - A free [Groq API key](https://console.groq.com/keys) (optional — the app works without it, but AI analysis will be skipped)
-- - OpenSSL installed (used to generate a secure JWT secret during environment setup)
+- OpenSSL installed (used to generate a secure JWT secret during environment setup)
 
 ### Step-by-Step Setup
 
